@@ -2,66 +2,36 @@
   <section class="nav-bar">
     <nav role="navigation">
       <ul class="nav">
-        <li class="nav"><a class="nav" href="/">About</a></li>
-        <li class="nav"><a class="nav" href="/">Sign In</a></li>
         <li class="nav"><a class="nav" href="/">Register</a></li>
+        <li class="nav"><a class="nav" href="/">Sign In</a></li>
+        <li class="nav"><a class="nav" href="/">About</a></li>
       </ul>
     </nav>
   </section>
 </header>
 
-<div>
+<div class="flex-container">
   <section>
-    <h1 class="test-class"><%= gettext "Welcome to %{name}!", name: "WeatherDrobe" %></h1>
+    <h1 class="test-class"><%= gettext "Welcome to %{name}!", name: "Weatherdrobe" %></h1>
   </section>
 </div>
 
-<div>
+<div class="flex-container">
 <%= form_for @conn, "/login", fn f -> %>
   <section class="sign-in">
     <h2>Login</h2>
     <p><%= text_input f, :x, placeholder: "abc@husky.neu.edu" %></p>
-    <p><%= text_input f, :p, placeholder: "****" %></p>
+    <p><%= password_input f, :p %></p>
     <p><%= submit "Submit" %></p>
   </section>
 <% end %>
 </div>
 
+<p></p>
+<p></p>
+<h2>Example Calendar</h2>
 
-
-
-
-
-
-
-
-<div>
-  <section>
-    Cal
-    <ul>
-      <li>Running</li>
-      <li>Work</li>
-    </ul>
-  </section>
-  <section>
-    Weather
-    <ul>
-      <li>Temp</li>
-      <li>Wind</li>
-      <li>Date</li>
-    </ul>
-  </section>
-  <section>
-    Clothes
-    <ul>
-      <li>Hat</li>
-      <li>Gloves</li>
-      <li>Pants</li>
-    </ul>
-  </section>
-</div>
-
-<div>
+<div class="flex-container">
   <section>
     <div>
       <div>
@@ -90,7 +60,7 @@
   <section>
     <div>
       <div>
-      Monday
+      Tuesday
       </div>
       <div>
       73°F
@@ -115,7 +85,7 @@
   <section>
     <div>
       <div>
-      Monday
+      Wednesday
       </div>
       <div>
       73°F
@@ -140,7 +110,7 @@
   <section>
     <div>
       <div>
-      Monday
+      Thursday
       </div>
       <div>
       73°F
@@ -165,7 +135,7 @@
   <section>
     <div>
       <div>
-      Monday
+      Friday
       </div>
       <div>
       73°F
@@ -190,7 +160,7 @@
   <section>
     <div>
       <div>
-      Monday
+      Saturday
       </div>
       <div>
       73°F
