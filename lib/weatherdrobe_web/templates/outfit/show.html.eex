@@ -1,0 +1,43 @@
+<h1>Show Outfit</h1>
+
+<ul>
+
+  <li>
+    <strong>Outfit type:</strong>
+    <%= @outfit.outfit_type %>
+  </li>
+
+  <li>
+    <strong>Rain?:</strong>
+    <%= @outfit.rain? %>
+  </li>
+
+  <li>
+    <strong>Snow?:</strong>
+    <%= @outfit.snow? %>
+  </li>
+
+  <li>
+    <strong>Wind?:</strong>
+    <%= @outfit.wind? %>
+  </li>
+
+  <li>
+    <strong>Sun?:</strong>
+    <%= @outfit.sun? %>
+  </li>
+
+  <li>
+    <strong>Temp low:</strong>
+    <%= @outfit.temp_low %>
+  </li>
+
+  <li>
+    <strong>Temp high:</strong>
+    <%= @outfit.temp_high %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.outfit_path(@conn, :edit, @outfit) %></span>
+<span><%= link "Back", to: Routes.outfit_path(@conn, :index) %></span>

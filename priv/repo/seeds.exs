@@ -9,3 +9,10 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias Weatherdrobe.Repo
+alias Weatherdrobe.Users.User
+
+Repo.insert!(%User{email: "alice@example.com", password: "pwhash", zipcode: "02115"})
+Repo.insert!(%User{email: "bob@example.com", password: "pwhash", zipcode: "99501"})
+
