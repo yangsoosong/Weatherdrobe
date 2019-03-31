@@ -68,8 +68,8 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :weatherdrobe, Weatherdrobe.Repo,
-  username: "weatherdrobe",
-  password: "weatherdrobe",
+  username: "postgres",
+  password: "postgres",
   database: "weatherdrobe_dev",
   hostname: "localhost",
   pool_size: 10

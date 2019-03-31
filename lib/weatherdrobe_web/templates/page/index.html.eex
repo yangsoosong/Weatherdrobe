@@ -1,35 +1,197 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
-  <p>A productive web framework that<br/>does not compromise speed and maintainability.</p>
-</section>
+<header>
+  <section class="nav-bar">
+    <nav role="navigation">
+      <ul>
+        <li><a href="https://hexdocs.pm/phoenix/overview.html">Home</a></li>
+        <li><a href="https://hexdocs.pm/phoenix/overview.html">Wardrobe</a></li>
+        <li><a href="https://hexdocs.pm/phoenix/overview.html">Activities</a></li>
+      </ul>
+    </nav>
+  </section>
+</header>
 
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
+<div>
+  <section>
+    <h1><%= gettext "Welcome to %{name}!", name: "Weatherdrobe" %></h1>
+    <p>A productive web framework that<br/>does not compromise speed and maintainability.</p>
+  </section>
+</div>
+
+<div>
+  <section>
+    Cal
     <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.4/CHANGELOG.md">v1.4 Changelog</a>
-      </li>
+      <li>Running</li>
+      <li>Work</li>
     </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
+  </section>
+  <section>
+    Weather
     <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on Freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
+      <li>Temp</li>
+      <li>Wind</li>
+      <li>Date</li>
     </ul>
-  </article>
-</section>
+  </section>
+  <section>
+    Clothes
+    <ul>
+      <li>Hat</li>
+      <li>Gloves</li>
+      <li>Pants</li>
+    </ul>
+  </section>
+</div>
+
+<div>
+  <section>
+    <div>
+      <div>
+      Monday
+      </div>
+      <div>
+      73°F
+      </div>
+    </div>
+    <div>
+      Cal
+      <ul>
+        <li>Running</li>
+        <li>Work</li>
+      </ul>
+    </div>
+    <div>
+      Clothes
+      <ul>
+        <li>Hat</li>
+        <li>Gloves</li>
+        <li>Pants</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div>
+      Monday
+      </div>
+      <div>
+      73°F
+      </div>
+    </div>
+    <div>
+      Cal
+      <ul>
+        <li>Running</li>
+        <li>Work</li>
+      </ul>
+    </div>
+    <div>
+      Clothes
+      <ul>
+        <li>Hat</li>
+        <li>Gloves</li>
+        <li>Pants</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div>
+      Monday
+      </div>
+      <div>
+      73°F
+      </div>
+    </div>
+    <div>
+      Cal
+      <ul>
+        <li>Running</li>
+        <li>Work</li>
+      </ul>
+    </div>
+    <div>
+      Clothes
+      <ul>
+        <li>Hat</li>
+        <li>Gloves</li>
+        <li>Pants</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div>
+      Monday
+      </div>
+      <div>
+      73°F
+      </div>
+    </div>
+    <div>
+      Cal
+      <ul>
+        <li>Running</li>
+        <li>Work</li>
+      </ul>
+    </div>
+    <div>
+      Clothes
+      <ul>
+        <li>Hat</li>
+        <li>Gloves</li>
+        <li>Pants</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div>
+      Monday
+      </div>
+      <div>
+      73°F
+      </div>
+    </div>
+    <div>
+      Cal
+      <ul>
+        <li>Running</li>
+        <li>Work</li>
+      </ul>
+    </div>
+    <div>
+      Clothes
+      <ul>
+        <li>Hat</li>
+        <li>Gloves</li>
+        <li>Pants</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div>
+      Monday
+      </div>
+      <div>
+      73°F
+      </div>
+    </div>
+    <div>
+      Cal
+      <ul>
+        <li>Running</li>
+        <li>Work</li>
+      </ul>
+    </div>
+    <div>
+      Clothes
+      <ul>
+        <li>Hat</li>
+        <li>Gloves</li>
+        <li>Pants</li>
+      </ul>
+    </div>
+  </section>
+</div>
