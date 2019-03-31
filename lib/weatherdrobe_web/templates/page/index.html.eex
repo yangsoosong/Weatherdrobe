@@ -1,10 +1,10 @@
 <header>
   <section class="nav-bar">
     <nav role="navigation">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/wardrobe">Wardrobe</a></li>
-        <li><a href="/activities">Activities</a></li>
+      <ul class="nav">
+        <li class="nav"><a class="nav" href="/">Home</a></li>
+        <li class="nav"><a class="nav" href="/wardrobe">Wardrobe</a></li>
+        <li class="nav"><a class="nav" href="/activities">Activities</a></li>
       </ul>
     </nav>
   </section>
