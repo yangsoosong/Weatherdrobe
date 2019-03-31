@@ -11,7 +11,7 @@
 </header>
 
 <div>
-  <section>
+  <section class="test-class">
     <h1><%= gettext "Welcome to %{name}!", name: "Weatherdrobe" %></h1>
     <p>A productive web framework that<br/>does not compromise speed and maintainability.</p>
   </section>
