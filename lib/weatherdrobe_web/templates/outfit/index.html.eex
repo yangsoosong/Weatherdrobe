@@ -1,0 +1,38 @@
+<h1>Listing Outfits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Outfit type</th>
+      <th>Rain?</th>
+      <th>Snow?</th>
+      <th>Wind?</th>
+      <th>Sun?</th>
+      <th>Temp low</th>
+      <th>Temp high</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for outfit <- @outfits do %>
+    <tr>
+      <td><%= outfit.outfit_type %></td>
+      <td><%= outfit.rain? %></td>
+      <td><%= outfit.snow? %></td>
+      <td><%= outfit.wind? %></td>
+      <td><%= outfit.sun? %></td>
+      <td><%= outfit.temp_low %></td>
+      <td><%= outfit.temp_high %></td>
+
+      <td>
+        <%= link "Show", to: Routes.outfit_path(@conn, :show, outfit) %>
+        <%= link "Edit", to: Routes.outfit_path(@conn, :edit, outfit) %>
+        <%= link "Delete", to: Routes.outfit_path(@conn, :delete, outfit), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Outfit", to: Routes.outfit_path(@conn, :new) %></span>

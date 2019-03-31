@@ -7,6 +7,7 @@ defmodule WeatherdrobeWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug WeatherdrobeWeb.Plugs.FetchSession
   end
 
   pipeline :api do
@@ -17,6 +18,11 @@ defmodule WeatherdrobeWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/users", UserController
+    resources "/outfits", OutfitController
+    resources "/activities", ActivityController
+    resources "/conjunctions", ConjunctionController
+    resources "/calendars", CalendarController
   end
 
   # Other scopes may use custom stacks.

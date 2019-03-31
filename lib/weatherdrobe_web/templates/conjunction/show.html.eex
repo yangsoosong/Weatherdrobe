@@ -1,0 +1,8 @@
+<h1>Show Conjunction</h1>
+
+<ul>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.conjunction_path(@conn, :edit, @conjunction) %></span>
+<span><%= link "Back", to: Routes.conjunction_path(@conn, :index) %></span>
