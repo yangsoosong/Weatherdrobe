@@ -2,17 +2,17 @@
   <section class="nav-bar">
     <nav role="navigation">
       <ul>
-        <li><a href="https://hexdocs.pm/phoenix/overview.html">Home</a></li>
-        <li><a href="https://hexdocs.pm/phoenix/overview.html">Wardrobe</a></li>
-        <li><a href="https://hexdocs.pm/phoenix/overview.html">Activities</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/wardrobe">Wardrobe</a></li>
+        <li><a href="/activities">Activities</a></li>
       </ul>
     </nav>
   </section>
 </header>
 
 <div>
-  <section class="test-class">
-    <h1><%= gettext "Welcome to %{name}!", name: "Weatherdrobe" %></h1>
+  <section>
+    <h1 class="test-class"><%= gettext "Welcome to %{name}!", name: "Weatherdrobe" %></h1>
     <p>A productive web framework that<br/>does not compromise speed and maintainability.</p>
   </section>
 </div>
