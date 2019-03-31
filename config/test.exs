@@ -11,8 +11,8 @@ config :logger, level: :warn
 
 # Configure your database
 config :weatherdrobe, Weatherdrobe.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "weatherdrobe",
+  password: "weatherdrobe",
   database: "weatherdrobe_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
