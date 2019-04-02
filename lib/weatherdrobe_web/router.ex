@@ -23,6 +23,7 @@ defmodule WeatherdrobeWeb.Router do
     resources "/activities", ActivityController
     resources "/conjunctions", ConjunctionController
     resources "/calendars", CalendarController
+    resources "/sessions", SessionController, only: [:create, :delete], singelton: true
   end
 
   # Other scopes may use custom stacks.
