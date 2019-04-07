@@ -18,6 +18,7 @@ defmodule WeatherdrobeWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/home", PageController, :home
     resources "/users", UserController
     resources "/outfits", OutfitController
     resources "/activities", ActivityController
