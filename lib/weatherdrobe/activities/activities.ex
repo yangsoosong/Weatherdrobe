@@ -27,6 +27,8 @@ defmodule Weatherdrobe.Activities do
     query = from u in User,
       where: u.id == ^user_id,
       select: u
+    IO.inspect("query")
+    IO.inspect(query)
     Repo.all(query)
   end
 

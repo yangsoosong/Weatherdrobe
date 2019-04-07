@@ -5,6 +5,12 @@
     </div>
   <% end %>
 
+  <div class="form-group hidden">
+    <%= label f, :user_id %>
+    <%= text_input f, :user_id, value: @current_user.id%>
+    <%= error_tag f, :user_id %>
+  </div>
+  
   <div class="form-button">
     <%= submit "Save" %>
   </div>

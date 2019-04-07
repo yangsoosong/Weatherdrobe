@@ -2,6 +2,9 @@
 @import "forms.scss";
 @import "nav.scss";
 
+.hidden {
+  display: none !important;
+}
 .test-class {
     color: rebeccapurple;
     padding: 20px;
