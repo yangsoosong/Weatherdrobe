@@ -24,9 +24,13 @@ defmodule Weatherdrobe.Activities do
   end
 
   def list_activities_by_user(user_id) do
-    query = from u in User,
-      where: u.id == ^user_id,
-      select: u
+
+    query = from a in Activity,
+      where: a.user_id == ^user_id,
+      select: a
+    #   query = from u in User,
+    # where: u.id == ^user_id,
+    #  select: Activity.u.id
     IO.inspect("query")
     IO.inspect(query)
     Repo.all(query)
