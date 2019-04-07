@@ -3,9 +3,15 @@ defmodule Weatherdrobe.Conjunctions.Conjunction do
   import Ecto.Changeset
 
   schema "conjunctions" do
+'''
     field :user_id, :id
     field :activity_id, :id
     field :outfit_id, :id
+'''
+
+    belongs_to :user, Weatherdrobe.Users.User
+    belongs_to :activity, Weatherdrobe.Activities.Activity
+    belongs_to :outfit, Weatherdrobe.Outfits.Outfit
 
     timestamps()
   end
@@ -13,7 +19,7 @@ defmodule Weatherdrobe.Conjunctions.Conjunction do
   @doc false
   def changeset(conjunction, attrs) do
     conjunction
-    |> cast(attrs, [])
-    |> validate_required([])
+    |> cast(attrs, [:user_id, :activity_id, :outfit_id])
+    |> validate_required([:user_id, :activity_id, :outfit_id])
   end
 end

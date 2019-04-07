@@ -8,6 +8,8 @@ defmodule Weatherdrobe.Activities do
 
   alias Weatherdrobe.Activities.Activity
 
+  alias Weatherdrobe.Users.User
+
   @doc """
   Returns the list of activities.
 
@@ -19,6 +21,15 @@ defmodule Weatherdrobe.Activities do
   """
   def list_activities do
     Repo.all(Activity)
+  end
+
+  def list_activities_by_user(user_id) do
+    query = from u in User,
+      where: u.id == ^user_id,
+      select: u
+    IO.inspect("query")
+    IO.inspect(query)
+    Repo.all(query)
   end
 
   @doc """

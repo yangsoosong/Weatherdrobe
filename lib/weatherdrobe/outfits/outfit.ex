@@ -10,7 +10,10 @@ defmodule Weatherdrobe.Outfits.Outfit do
     field :temp_high, :integer
     field :temp_low, :integer
     field :wind?, :boolean, default: false
-    field :user_id, :id
+    #    field :user_id, :id
+
+    belongs_to :user, Weatherdrobe.Users.User
+    has_many :conjunction, Weatherdrobe.Conjunctions.Conjunction
 
     timestamps()
   end
@@ -18,7 +21,7 @@ defmodule Weatherdrobe.Outfits.Outfit do
   @doc false
   def changeset(outfit, attrs) do
     outfit
-    |> cast(attrs, [:outfit_type, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high])
-    |> validate_required([:outfit_type, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high])
+    |> cast(attrs, [:outfit_type, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high, :user_id])
+    |> validate_required([:outfit_type, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high, :user_id])
   end
 end

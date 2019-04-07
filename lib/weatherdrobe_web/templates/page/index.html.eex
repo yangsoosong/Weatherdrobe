@@ -16,7 +16,7 @@
       <%= form_for @conn, Routes.session_path(@conn, :create), [class: "form-inline"], fn f -> %>
         <h2>Login</h2>
         <p><%= text_input(f, :email, placeholder: "abc@husky.neu.edu") %></p>
-        <p><%= password_input(f, :password) %></p>
+        <p><%= password_input(f, :password, placeholder: "******") %></p>
         <p><%= submit "Login" %></p>
       <% end %>
     <% end %>
