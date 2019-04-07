@@ -2,12 +2,13 @@
   <section class="nav-bar">
     <nav role="navigation">
       <ul class="nav">
-        <li class="nav">   <%= link "Sign In", to: Routes.user_path(@conn, :index), class: 'nav' %> </li>
-        <li class="nav">   <%= link "Register User", to: Routes.user_path(@conn, :new), class: 'nav' %> </li>
+        <li class="nav">   <%= link "Sign In", to: "/", class: 'nav' %> </li>
+        <li class="nav">   <%= link "Register", to: Routes.user_path(@conn, :new), class: 'nav' %> </li>
+        <li class="nav">   <%= link "Users", to: Routes.user_path(@conn, :index), class: 'nav' %> </li>
         <li class="nav">   <%= link "Calendar", to: Routes.calendar_path(@conn, :index), class: 'nav' %> </li>
         <li class="nav">   <%= link "Wardrobe", to: Routes.outfit_path(@conn, :index), class: 'nav' %> </li>
         <li class="nav">   <%= link "Activities", to: Routes.activity_path(@conn, :index), class: 'nav' %> </li>
-        <li class="nav">   <%= link "Home", to: "/", class: 'nav nav-left' %> </li>
+        <li class="nav">   <%= link "Home", to: "/home", class: 'nav nav-left' %> </li>
       </ul>
     </nav>
   </section>
