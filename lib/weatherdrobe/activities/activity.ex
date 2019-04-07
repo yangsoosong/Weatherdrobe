@@ -16,7 +16,7 @@ defmodule Weatherdrobe.Activities.Activity do
   @doc false
   def changeset(activity, attrs) do
     activity
-    |> cast(attrs, [:name, :indoor?])
-    |> validate_required([:name, :indoor?])
+    |> cast(attrs, [:name, :indoor?, :user_id])
+    |> validate_required([:name, :indoor?, :user_id])
   end
 end

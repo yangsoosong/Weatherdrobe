@@ -19,7 +19,7 @@ defmodule Weatherdrobe.Conjunctions.Conjunction do
   @doc false
   def changeset(conjunction, attrs) do
     conjunction
-    |> cast(attrs, [])
-    |> validate_required([])
+    |> cast(attrs, [:user_id, :activity_id, :outfit_id])
+    |> validate_required([:user_id, :activity_id, :outfit_id])
   end
 end

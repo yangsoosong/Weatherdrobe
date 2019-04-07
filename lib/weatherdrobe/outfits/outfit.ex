@@ -21,7 +21,7 @@ defmodule Weatherdrobe.Outfits.Outfit do
   @doc false
   def changeset(outfit, attrs) do
     outfit
-    |> cast(attrs, [:outfit_type, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high])
-    |> validate_required([:outfit_type, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high])
+    |> cast(attrs, [:outfit_type, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high, :user_id])
+    |> validate_required([:outfit_type, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high, :user_id])
   end
 end

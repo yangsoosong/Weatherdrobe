@@ -16,7 +16,7 @@ defmodule Weatherdrobe.Calendars.Calendar do
   @doc false
   def changeset(calendar, attrs) do
     calendar
-    |> cast(attrs, [:date])
-    |> validate_required([:date])
+    |> cast(attrs, [:date, :user_id, :activity_id])
+    |> validate_required([:date, :user_id, :activity_id])
   end
 end
