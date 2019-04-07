@@ -5,24 +5,26 @@
 <table>
   <thead>
     <tr>
+      <th>User ID:</th>
       <th>Name</th>
       <th>Indoor?</th>
-
       <th></th>
     </tr>
   </thead>
   <tbody>
 <%= for activity <- @activities do %>
+  <%= if @current_user.id == activity.user_id do %>
     <tr>
+      <td><%= activity.user_id %></td>
       <td><%= activity.name %></td>
       <td><%= activity.indoor? %></td>
-
       <td>
         <%= link "Show", to: Routes.activity_path(@conn, :show, activity) %>
         <%= link "Edit", to: Routes.activity_path(@conn, :edit, activity) %>
         <%= link "Delete", to: Routes.activity_path(@conn, :delete, activity), method: :delete, data: [confirm: "Are you sure?"] %>
       </td>
     </tr>
+  <% end %>
 <% end %>
   </tbody>
 </table>
