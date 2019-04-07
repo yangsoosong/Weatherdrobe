@@ -83,8 +83,8 @@ get_secret = fn name ->
   String.trim(File.read!(path))
 end
 
-config :foo, WeatherdrobeWeb.Endpoint,
+config :darksky, WeatherdrobeWeb.Endpoint,
   secret_key_base: get_secret.("dark_sky_api")
 
-config :foo2, WeatherdrobeWeb.Endpoint,
-  secret_key_base: get_secret.("google_api")
+config :googlegeocoding, WeatherdrobeWeb.Endpoint,
+  secret_key_base: get_secret.("google_geocoding_api")
