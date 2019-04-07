@@ -1,14 +1,4 @@
-<header>
-  <section class="nav-bar">
-    <nav role="navigation">
-      <ul class="nav">
-        <li class="nav">   <%= link "Register User", to: Routes.user_path(@conn, :new), class: 'nav' %> </li>
-        <li class="nav"><a class="nav" href="/">Sign In</a></li>
-        <li class="nav"><a class="nav" href="/">About</a></li>
-      </ul>
-    </nav>
-  </section>
-</header>
+<%= render(WeatherdrobeWeb.SharedView, "_header.html", conn: @conn) %>
 
 <div class="flex-container">
   <section>
