@@ -17,7 +17,7 @@
 </div>
 
 <div class="flex-container">
-<%= form_for @conn, "/login", fn f -> %>
+<%= form_for @conn, Routes.session_path(@conn, :create), [class: "form-inline"], fn f -> %>
   <section class="sign-in">
     <h2>Login</h2>
     <p><%= text_input f, :x, placeholder: "abc@husky.neu.edu" %></p>
