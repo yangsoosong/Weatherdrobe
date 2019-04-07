@@ -3,9 +3,15 @@ defmodule Weatherdrobe.Conjunctions.Conjunction do
   import Ecto.Changeset
 
   schema "conjunctions" do
+'''
     field :user_id, :id
     field :activity_id, :id
     field :outfit_id, :id
+'''
+
+    belongs_to :user, Weatherdrobe.Users.User
+    belongs_to :activity, Weatherdrobe.Activities.Activity
+    belongs_to :outfit, Weatherdrobe.Outfits.Outfit
 
     timestamps()
   end

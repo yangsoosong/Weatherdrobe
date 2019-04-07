@@ -10,7 +10,10 @@ defmodule Weatherdrobe.Outfits.Outfit do
     field :temp_high, :integer
     field :temp_low, :integer
     field :wind?, :boolean, default: false
-    field :user_id, :id
+    #    field :user_id, :id
+
+    belongs_to :user, Weatherdrobe.Users.User
+    has_many :conjunction, Weatherdrobe.Conjunctions.Conjunction
 
     timestamps()
   end

@@ -10,6 +10,12 @@ defmodule Weatherdrobe.Users.User do
     field :password, :string, virtual: true
     # field :password_confirmation, :string, virtual: true
 
+
+    has_many :conjunction, Weatherdrobe.Conjunctions.Conjunction
+    has_many :outfit, Weatherdrobe.Outfits.Outfit
+    has_many :activity, Weatherdrobe.Activities.Activity
+    has_many :calendar, Weatherdrobe.Calendars.Calendar
+
     timestamps()
   end
  

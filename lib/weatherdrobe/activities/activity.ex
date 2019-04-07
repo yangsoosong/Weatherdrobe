@@ -5,8 +5,11 @@ defmodule Weatherdrobe.Activities.Activity do
   schema "activities" do
     field :indoor?, :boolean, default: false
     field :name, :string
-    field :user_id, :id
 
+    belongs_to :user, Weatherdrobe.Users.User
+    has_many :conjunction, Weatherdrobe.Conjunctions.Conjunction
+    has_many :calendar, Weatherdrobe.Calendars.Calendar
+    
     timestamps()
   end
 
