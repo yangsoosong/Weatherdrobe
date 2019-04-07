@@ -1,3 +1,5 @@
+@import "tables.scss";
+
 .test-class {
     color: rebeccapurple;
     padding: 20px;
@@ -30,7 +32,6 @@ li a.nav {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a.nav:hover {
   background-color: #111;
 }

@@ -1,0 +1,59 @@
+table {
+  font-family: Arial, Helvetica, sans-serif;
+	color: black;
+	font-size: 12px;
+	background: darkgrey;
+	margin-bottom: 20px;
+	border: lightgray 1px solid;
+	border-radius: 2px;
+  
+  a {
+    color: blue;
+    text-decoration: none;
+    background-color: lightgray;
+    padding: 2px 6px;
+    border: 1px solid black;
+    margin: 6px;
+    font-weight: bold;
+
+
+    &:link {
+      border: 1px solid black;
+    }
+
+    &:active, &:hover {
+      background-color: darkgray;
+    }
+  }
+
+  th {
+    padding: 20px;
+    background: lightblue;
+
+    &:first-child{
+      border-top-left-radius: 3px;
+    }
+
+    &::last-child {
+      border-top-right-radius: 3px;
+    }
+  }
+
+  tr, td {
+    text-align: center;
+    padding: 20px;
+    background: whitesmoke;
+  }
+
+  tr:last-child td:first-child {
+    border-bottom-left-radius:3px;
+  }
+  
+  tr:last-child td:last-child {
+    border-bottom-right-radius:3px;
+  }
+
+  tr:hover td {
+    background:lightyellow;	
+  }
+}
