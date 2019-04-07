@@ -3,8 +3,6 @@
 <h1>Show Outfit</h1>
 
 <ul>
-outfit
-
   <li>
     <strong>User ID:</strong>
     <%= @outfit.user_id %>
@@ -39,7 +37,6 @@ outfit
     <strong>Temp high:</strong>
     <%= @outfit.temp_high %>
   </li>
-
 </ul>
 
 <span><%= link "Edit", to: Routes.outfit_path(@conn, :edit, @outfit) %></span>
