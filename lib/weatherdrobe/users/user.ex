@@ -44,10 +44,12 @@ defmodule Weatherdrobe.Users.User do
     def put_pass_hash(changeset), do: changeset
 
 
-def valid_password?(password) when byte_size(password) > 4 do
-{:ok, password}
-end
-def valid_password?(_), do: {:error, "The password is too short"}
+    
+    def valid_password?(password) when byte_size(password) > 4 do
+      {:ok, password}
+    end
+    
+    def valid_password?(_), do: {:error, "The password is too short"}
 end
 
 '''
