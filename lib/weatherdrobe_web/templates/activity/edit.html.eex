@@ -1,3 +1,5 @@
+<%= render(WeatherdrobeWeb.SharedView, "_header.html", conn: @conn) %>
+
 <h1>Edit Activity</h1>
 
 <%= render "form.html", Map.put(assigns, :action, Routes.activity_path(@conn, :update, @activity)) %>

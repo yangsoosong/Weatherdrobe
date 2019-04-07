@@ -1,3 +1,5 @@
+<%= render(WeatherdrobeWeb.SharedView, "_header.html", conn: @conn) %>
+
 <h1>Listing Users</h1>
 
 <table>
