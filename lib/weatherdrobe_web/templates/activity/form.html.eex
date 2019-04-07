@@ -5,15 +5,19 @@
     </div>
   <% end %>
 
-  <%= label f, :name %>
-  <%= text_input f, :name %>
-  <%= error_tag f, :name %>
+  <div class="form-group">
+    <%= label f, :name %>
+    <%= text_input f, :name %>
+    <%= error_tag f, :name %>
+  </div>
 
-  <%= label f, :indoor? %>
-  <%= checkbox f, :indoor? %>
-  <%= error_tag f, :indoor? %>
-
-  <div>
+  <div class="form-group">
+    <%= label f, :indoor? %>
+    <%= checkbox f, :indoor? %>
+    <%= error_tag f, :indoor? %>
+  </div>
+  
+  <div class="form-button">
     <%= submit "Save" %>
   </div>
 <% end %>
