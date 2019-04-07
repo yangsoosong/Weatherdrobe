@@ -1,4 +1,4 @@
-@doc """
+        """
 	Attribution to github user sntran for use of geocode funtions and GoogleMaps module at  https://github.com/sntran/ex_maps/blob/master/lib/google_maps.ex
 	"""
 defmodule GoogleMaps do

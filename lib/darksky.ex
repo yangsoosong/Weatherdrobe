@@ -1,4 +1,4 @@
-@doc """
+  """
   Attribution to github user vegahu for use of forcast funtion found at https://github.com/vegahu/darksky-elixir/blob/master/lib/darksky.ex 
   """
 
