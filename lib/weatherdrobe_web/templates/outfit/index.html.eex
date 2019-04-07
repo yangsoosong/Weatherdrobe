@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>User ID</th>
       <th>Outfit type</th>
       <th>Rain?</th>
       <th>Snow?</th>
@@ -12,13 +13,14 @@
       <th>Sun?</th>
       <th>Temp low</th>
       <th>Temp high</th>
-
       <th></th>
     </tr>
   </thead>
   <tbody>
 <%= for outfit <- @outfits do %>
+  <%= if @current_user.id == outfit.user_id do %>
     <tr>
+      <td><%= outfit.user_id %></td>
       <td><%= outfit.outfit_type %></td>
       <td><%= outfit.rain? %></td>
       <td><%= outfit.snow? %></td>
@@ -26,13 +28,13 @@
       <td><%= outfit.sun? %></td>
       <td><%= outfit.temp_low %></td>
       <td><%= outfit.temp_high %></td>
-
       <td>
         <%= link "Show", to: Routes.outfit_path(@conn, :show, outfit) %>
         <%= link "Edit", to: Routes.outfit_path(@conn, :edit, outfit) %>
         <%= link "Delete", to: Routes.outfit_path(@conn, :delete, outfit), method: :delete, data: [confirm: "Are you sure?"] %>
       </td>
     </tr>
+  <% end %>
 <% end %>
   </tbody>
 </table>

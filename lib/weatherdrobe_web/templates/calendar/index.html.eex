@@ -5,22 +5,24 @@
 <table>
   <thead>
     <tr>
+      <th>User ID:</th>
       <th>Date</th>
-
       <th></th>
     </tr>
   </thead>
   <tbody>
 <%= for calendar <- @calendars do %>
+  <%= if @current_user.id == calendar.user_id do %>
     <tr>
+      <td><%= calendar.user_id %></td>
       <td><%= calendar.date %></td>
-
       <td>
         <%= link "Show", to: Routes.calendar_path(@conn, :show, calendar) %>
         <%= link "Edit", to: Routes.calendar_path(@conn, :edit, calendar) %>
         <%= link "Delete", to: Routes.calendar_path(@conn, :delete, calendar), method: :delete, data: [confirm: "Are you sure?"] %>
       </td>
     </tr>
+  <% end %>
 <% end %>
   </tbody>
 </table>

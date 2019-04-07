@@ -3,10 +3,11 @@
 <h1>Show Outfit</h1>
 
 <ul>
+outfit
 
   <li>
-    <strong>Outfit type:</strong>
-    <%= @outfit.outfit_type %>
+    <strong>User ID:</strong>
+    <%= @outfit.user_id %>
   </li>
 
   <li>
