@@ -1,7 +1,7 @@
 defmodule WeatherdrobeWeb.SessionController do
   use WeatherdrobeWeb, :controller
 
-  def create(conn, %{"email" => email, "password" => pass, "zipcode" =>zipcode}) do
+  def create(conn, %{"email" => email, "password" => pass}) do
     IO.inspect({email, pass})
     user = get_and_auth_user(email, pass)
     #    user = Weatherdrobe.Users.get_user_by_email(email)
