@@ -5,7 +5,7 @@ defmodule Weatherdrobe.Repo.Migrations.CreateUsers do
     create table(:users) do
       add :email, :string, null: false
       add :password_hash, :string, null: false
-      add :zipcode, :string, null: false
+      add :zipcode, :string, null: true
 
       timestamps()
     end
