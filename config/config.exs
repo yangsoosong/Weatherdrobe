@@ -22,6 +22,10 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+# Configures Google Geocoidng API
+config :google_maps,
+  api_key: "AIzaSyD2Yta8fmMqbpBs1dpibQHogGRSiUEUpMw"
+
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 

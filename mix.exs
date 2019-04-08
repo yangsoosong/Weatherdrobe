@@ -20,7 +20,8 @@ defmodule Weatherdrobe.MixProject do
   def application do
     [
       mod: {Weatherdrobe.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools],
+      applicatoins: [:google_maps]
     ]
   end
 
@@ -44,6 +45,7 @@ defmodule Weatherdrobe.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
 
+      {:google_maps, "~> 0.11"},
       {:comeonin, "~> 4.1"},
       {:argon2_elixir, "~> 1.3"}
     ]
