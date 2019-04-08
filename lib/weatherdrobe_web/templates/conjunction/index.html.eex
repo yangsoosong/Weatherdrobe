@@ -15,7 +15,6 @@
     <tr>
       <td><%= conjunction.user_id %></td>
       <td>
-        <%= link "Show", to: Routes.conjunction_path(@conn, :show, conjunction) %>
         <%= link "Edit", to: Routes.conjunction_path(@conn, :edit, conjunction) %>
         <%= link "Delete", to: Routes.conjunction_path(@conn, :delete, conjunction), method: :delete, data: [confirm: "Are you sure?"] %>
       </td>

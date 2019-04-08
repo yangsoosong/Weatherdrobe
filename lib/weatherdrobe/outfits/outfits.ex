@@ -21,6 +21,14 @@ defmodule Weatherdrobe.Outfits do
     Repo.all(Outfit)
   end
 
+  def list_outfits_by_user(user_id) do
+
+    query = from a in Outfit,
+      where: a.user_id == ^user_id,
+      select: a
+    Repo.all(query)
+  end
+
   @doc """
   Gets a single outfit.
 

@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>User ID:</th>
+      <th>Activity:</th>
       <th>Date</th>
       <th></th>
     </tr>
@@ -15,6 +16,7 @@
   <%= if @current_user.id == calendar.user_id do %>
     <tr>
       <td><%= calendar.user_id %></td>
+      <td><%# Weatherdrobe.Activities.get_activity(calendar.activity_id)%>Check Edit</td>
       <td><%= calendar.date %></td>
       <td>
         <%= link "Show", to: Routes.calendar_path(@conn, :show, calendar) %>
