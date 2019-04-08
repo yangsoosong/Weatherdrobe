@@ -8,6 +8,7 @@
       <th>User ID:</th>
       <th>Activity:</th>
       <th>Date</th>
+      <th>Name</th>
       <th></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
       <td><%= calendar.user_id %></td>
       <td><%# Weatherdrobe.Activities.get_activity(calendar.activity_id)%>Check Edit</td>
       <td><%= calendar.date %></td>
+      <td><%= calendar.name %></td>
       <td>
         <%= link "Show", to: Routes.calendar_path(@conn, :show, calendar) %>
         <%= link "Edit", to: Routes.calendar_path(@conn, :edit, calendar) %>

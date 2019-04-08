@@ -9,6 +9,15 @@
   </li>
 
   <li>
+    <strong>OUtfit Type:</strong>
+    <%= @outfit.outfit_type %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @outfit.name %>
+
+  <li>
     <strong>Rain?:</strong>
     <%= @outfit.rain? %>
   </li>

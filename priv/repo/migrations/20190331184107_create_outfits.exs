@@ -4,6 +4,7 @@ defmodule Weatherdrobe.Repo.Migrations.CreateOutfits do
   def change do
     create table(:outfits) do
       add :outfit_type, :string, null: false
+      add :name, :string, null: false
       add :rain?, :boolean, default: false, null: false
       add :snow?, :boolean, default: false, null: false
       add :wind?, :boolean, default: false, null: false

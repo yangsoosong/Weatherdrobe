@@ -10,6 +10,8 @@ defmodule Weatherdrobe.Users.User do
     field :password, :string, virtual: true
     # field :password_confirmation, :string, virtual: true
 
+    field :latitude, :string
+    field :longitude, :string
 
     has_many :conjunction, Weatherdrobe.Conjunctions.Conjunction
     has_many :outfit, Weatherdrobe.Outfits.Outfit
