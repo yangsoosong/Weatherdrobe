@@ -7,8 +7,9 @@
     <tr>
       <th>ID</th>
       <th>Email</th>
-      <th>Password hash</th>
       <th>Zipcode</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
       <th></th>
     </tr>
   </thead>
@@ -17,8 +18,9 @@
     <tr>
       <td><%= user.id %></td>
       <td><%= user.email %></td>
-      <td><%= user.password_hash %></td>
       <td><%= user.zipcode %></td>
+      <td><%= user.latitude %></td>
+      <td><%= user.longitude %></td>
       <td>
         <%= link "Show", to: Routes.user_path(@conn, :show, user) %>
         <%= link "Edit", to: Routes.user_path(@conn, :edit, user) %>
