@@ -3,7 +3,7 @@ defmodule Weatherdrobe.Repo.Migrations.CreateCalendars do
 
   def change do
     create table(:calendars) do
-      add :date, :naive_datetime, null: false
+      add :date, :date, null: false
       add :name, :string, null: false
       add :activity_id, references(:activities, on_delete: :nothing), null: false
       add :user_id, references(:users, on_delete: :nothing), null: false

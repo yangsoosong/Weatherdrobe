@@ -3,7 +3,7 @@ defmodule Weatherdrobe.Calendars.Calendar do
   import Ecto.Changeset
 
   schema "calendars" do
-    field :date, :naive_datetime
+    field :date, :date
     field :name, :string
     #field :activity_id, :id
     #field :user_id, :id
