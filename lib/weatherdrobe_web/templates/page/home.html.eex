@@ -25,7 +25,7 @@
   <section>
     <div>
       <h3>Clothes</h3>
-      <%= for activity <- Darksky.getCal do %>
+      <%= for activity <- Darksky.getCal() do %>
         <h4><%= activity %></h2>
         <ul>
           <%= for clothes <- Darksky.getActivityClothes(activity) do %>

@@ -32,8 +32,23 @@ defmodule Darksky do
     end
   end
   
-  def getDate(add) do
-    "2019-04-08"
+  def getDate(index) do
+    cond do
+      (index === 0) ->
+        "2019-04-08"
+      (index === 1) ->
+        "2019-04-09"
+      (index === 2) ->
+        "2019-04-10"
+      (index === 3) ->
+        "2019-04-11"
+      (index === 4) ->
+        "2019-04-12"
+      (index === 5) ->
+        "2019-04-13"
+      true ->
+        "0"
+    end
   end
 
   def futureHighTemperature(index) do
