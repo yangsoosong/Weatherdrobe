@@ -23,8 +23,14 @@ config :logger, :console,
   metadata: [:request_id]
 
 # Configures Google Geocoidng API
-config :google_maps,
-  api_key: "AIzaSyD2Yta8fmMqbpBs1dpibQHogGRSiUEUpMw"
+config :geocoder, :worker_pool_config, [
+size: 4,
+max_overflow: 2
+]
+
+config :geocoder, :worker, [
+provider: Geocoder.Providers.GoogleMaps # is the default, or OpenStreetMaps
+]
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason

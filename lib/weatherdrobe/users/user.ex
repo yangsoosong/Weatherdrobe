@@ -25,7 +25,7 @@ defmodule Weatherdrobe.Users.User do
   
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:email, :password, :zipcode])
+    |> cast(attrs, [:email, :password, :zipcode, :latitude, :longitude])
     |> validate_confirmation(:password)
     |> validate_password(:password)
     |> put_pass_hash()
