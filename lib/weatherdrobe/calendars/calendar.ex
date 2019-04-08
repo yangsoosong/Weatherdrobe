@@ -3,7 +3,8 @@ defmodule Weatherdrobe.Calendars.Calendar do
   import Ecto.Changeset
 
   schema "calendars" do
-    field :date, :naive_datetime
+    field :date, :date
+    field :name, :string
     #field :activity_id, :id
     #field :user_id, :id
 
@@ -16,7 +17,7 @@ defmodule Weatherdrobe.Calendars.Calendar do
   @doc false
   def changeset(calendar, attrs) do
     calendar
-    |> cast(attrs, [:date, :user_id, :activity_id])
-    |> validate_required([:date, :user_id, :activity_id])
+    |> cast(attrs, [:date, :name, :user_id, :activity_id])
+    |> validate_required([:date, :name, :user_id, :activity_id])
   end
 end

@@ -3,7 +3,10 @@
 <h1>Show Conjunction</h1>
 
 <ul>
-
+  <li>
+    <strong>User ID:</strong>
+    <%= @conjunction.user_id %>
+  </li>
 </ul>
 
 <span><%= link "Edit", to: Routes.conjunction_path(@conn, :edit, @conjunction) %></span>

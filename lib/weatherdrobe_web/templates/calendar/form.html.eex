@@ -7,8 +7,14 @@
 
   <div class="form-group">
     <%= label f, :date %>
-    <%= datetime_select f, :date %>
+    <%= date_select f, :date %>
     <%= error_tag f, :date %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :name %>
+    <%= text_input f, :name %>
+    <%= error_tag f, :name %>
   </div>
 
   <div class="form-group">

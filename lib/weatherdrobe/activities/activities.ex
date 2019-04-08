@@ -24,11 +24,10 @@ defmodule Weatherdrobe.Activities do
   end
 
   def list_activities_by_user(user_id) do
-    query = from u in User,
-      where: u.id == ^user_id,
-      select: u
-    IO.inspect("query")
-    IO.inspect(query)
+
+    query = from a in Activity,
+      where: a.user_id == ^user_id,
+      select: a
     Repo.all(query)
   end
 
@@ -47,6 +46,7 @@ defmodule Weatherdrobe.Activities do
 
   """
   def get_activity!(id), do: Repo.get!(Activity, id)
+  def get_activity(id), do: Repo.get(Activity, id)
 
   @doc """
   Creates a activity.

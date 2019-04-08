@@ -10,8 +10,10 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :weatherdrobe, WeatherdrobeWeb.Endpoint,
+  server: true,
   http: [:inet6, port: System.get_env("PORT") || 4000],
-  url: [host: "example.com", port: 80],
+#  url: [host: "example.com", port: 80],
+  url: [host: "weatherdrobe.yangsoosong.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
@@ -70,21 +72,8 @@ config :logger, level: :info
 # separately.
 #import_config "prod.secret.exs"
 
-get_secret = fn name ->
-  # Secret generation hack by Nat Tuck for CS4550
-  # This function is dedicated to the public domain.
-  base = Path.expand("~/.config/phx-secrets")
-  File.mkdir_p!(base)
-  path = Path.join(base, name)
-  unless File.exists?(path) do
-    secret = Base.encode16(:crypto.strong_rand_bytes(32))
-    File.write!(path, secret)
-  end
-  String.trim(File.read!(path))
-end
-
-config :darksky, WeatherdrobeWeb.Endpoint,
-  secret_key_base: get_secret.("dark_sky_api")
-
-config :googlegeocoding, WeatherdrobeWeb.Endpoint,
-  secret_key_base: get_secret.("google_geocoding_api")
+config :weatherdrobe, Weatherdrobe.Repo,
+  username: "weatherdrobe",
+  password: "weatherdrobe",
+  database: "weatherdrobe_dev",
+  pool_size: 15

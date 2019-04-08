@@ -3,10 +3,19 @@
 <h1>Show Calendar</h1>
 
 <ul>
-
+  <li>
+    <strong>User ID:</strong>
+    <%= @calendar.user_id %>
+  </li>
+  
   <li>
     <strong>Date:</strong>
     <%= @calendar.date %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @calendar.name %>
   </li>
 
 </ul>

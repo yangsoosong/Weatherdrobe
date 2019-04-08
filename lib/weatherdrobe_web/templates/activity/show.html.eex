@@ -3,7 +3,11 @@
 <h1>Show Activity</h1>
 
 <ul>
-
+  <li>
+    <strong>User ID:</strong>
+    <%= @activity.user_id %>
+  </li>
+  
   <li>
     <strong>Name:</strong>
     <%= @activity.name %>
@@ -13,7 +17,6 @@
     <strong>Indoor?:</strong>
     <%= @activity.indoor? %>
   </li>
-
 </ul>
 
 <span><%= link "Edit", to: Routes.activity_path(@conn, :edit, @activity) %></span>

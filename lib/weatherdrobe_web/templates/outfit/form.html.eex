@@ -7,9 +7,17 @@
 
   <div class="form-group">
     <%= label f, :outfit_type %>
-    <%= text_input f, :outfit_type %>
+    <%= select(f, :outfit_type, Enum.map(["footwear", "gloves", "pants", "shirts", "hats", "sunglasses", "jackets", "ties", "umbrella", "scarf"], fn x -> x end)) %>
+
     <%= error_tag f, :outfit_type %>
   </div>
+
+  <div class="form-group">
+    <%= label f, :name %>
+    <%= text_input f, :name %>
+    <%= error_tag f, :name %>
+  </div>
+
 
   <div class="form-group">
     <%= label f, :rain? %>
