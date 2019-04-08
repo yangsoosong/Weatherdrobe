@@ -2,7 +2,6 @@ defmodule Darksky do
   use GenServer
 
   @base_url "https://api.darksky.net/forecast/"
-
   def getCal() do
     # @activities
     # <%= if @current_user.id == activity.user_id do %>
@@ -14,7 +13,7 @@ defmodule Darksky do
   end
 
   def todaysWeatherIcon() do
-    "/rain/png"
+    "/images/Rain.png"
   end
 
   def todaysWeatherSummary() do
@@ -30,6 +29,11 @@ defmodule Darksky do
       true ->
         ["nothing"]
     end
+  end
+
+
+  def getTodaysClothes() do
+    ["Umbrella", "Sweatshirt", "Jeans", "T_Shirt"]
   end
   
   def getDate(index) do
@@ -88,15 +92,15 @@ defmodule Darksky do
   def futureWeatherIcon(index) do
     cond do
       (index === 1) ->
-        "/rain.png"
+        "/images/Rain.png"
       (index === 2) ->
-        "/rain.png"
+        "/images/Sunny.png"
       (index === 3) ->
-        "/rain.png"
+        "/images/PartlyCloudy.png"
       (index === 4) ->
-        "/rain.png"
+        "/images/PartlyCloudy.png"
       (index === 5) ->
-        "/rain.png"
+        "/images/Sunny.png"
       true ->
         "0"
     end
@@ -109,9 +113,9 @@ defmodule Darksky do
       (index === 2) ->
         "sunny"
       (index === 3) ->
-        "cloudy"
+        "Cloudy"
       (index === 4) ->
-        "rain"
+        "Partly Cloudy"
       (index === 5) ->
         "sunny"
       true ->
