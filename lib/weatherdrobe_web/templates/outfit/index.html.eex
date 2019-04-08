@@ -7,6 +7,7 @@
     <tr>
       <th>User ID</th>
       <th>Outfit type</th>
+      <th>Name</th>
       <th>Rain?</th>
       <th>Snow?</th>
       <th>Wind?</th>
@@ -22,6 +23,7 @@
     <tr>
       <td><%= outfit.user_id %></td>
       <td><%= outfit.outfit_type %></td>
+      <td><%= outfit.name %></td>
       <td><%= outfit.rain? %></td>
       <td><%= outfit.snow? %></td>
       <td><%= outfit.wind? %></td>

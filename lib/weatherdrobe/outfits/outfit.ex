@@ -4,6 +4,7 @@ defmodule Weatherdrobe.Outfits.Outfit do
 
   schema "outfits" do
     field :outfit_type, :string
+    field :name, :string
     field :rain?, :boolean, default: false
     field :snow?, :boolean, default: false
     field :sun?, :boolean, default: false
@@ -21,7 +22,7 @@ defmodule Weatherdrobe.Outfits.Outfit do
   @doc false
   def changeset(outfit, attrs) do
     outfit
-    |> cast(attrs, [:outfit_type, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high, :user_id])
-    |> validate_required([:outfit_type, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high, :user_id])
+    |> cast(attrs, [:outfit_type, :name, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high, :user_id])
+    |> validate_required([:outfit_type, :name, :rain?, :snow?, :wind?, :sun?, :temp_low, :temp_high, :user_id])
   end
 end

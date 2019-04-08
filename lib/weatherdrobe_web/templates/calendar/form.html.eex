@@ -12,6 +12,12 @@
   </div>
 
   <div class="form-group">
+    <%= label f, :name %>
+    <%= text_input f, :name %>
+    <%= error_tag f, :name %>
+  </div>
+
+  <div class="form-group">
     <%= label f, :activity_id %>
     <%= select(f, :activity_id, Enum.map(Weatherdrobe.Activities.list_activities_by_user(@current_user.id), &{&1.name, &1.id})) %>
     <%= error_tag f, :activity_id %>

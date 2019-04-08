@@ -13,6 +13,11 @@
     <%= @calendar.date %>
   </li>
 
+  <li>
+    <strong>Name:</strong>
+    <%= @calendar.name %>
+  </li>
+
 </ul>
 
 <span><%= link "Edit", to: Routes.calendar_path(@conn, :edit, @calendar) %></span>

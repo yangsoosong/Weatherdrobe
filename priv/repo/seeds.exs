@@ -22,10 +22,10 @@ alias Weatherdrobe.Activities.Activity
 Repo.insert!(%Activity{name: "skiing", indoor?: true, user_id: 1})
 
 alias Weatherdrobe.Outfits.Outfit
-Repo.insert!(%Outfit{outfit_type: "sunglasses", rain?: false, snow?: false, sun?: true, temp_low: 30, temp_high: 100, wind?: false, user_id: 1})
+Repo.insert!(%Outfit{outfit_type: "sunglasses", name: "shades", rain?: false, snow?: false, sun?: true, temp_low: 30, temp_high: 100, wind?: false, user_id: 1})
 
 alias Weatherdrobe.Calendars.Calendar
-Repo.insert!(%Calendar{date: ~N[2019-04-07 21:36:32], activity_id: 1, user_id: 1})
+Repo.insert!(%Calendar{date: ~N[2019-04-07 21:36:32], name: "skiing festival", activity_id: 1, user_id: 1})
 
 alias Weatherdrobe.Conjunctions.Conjunction
 Repo.insert!(%Conjunction{user_id: 1, activity_id: 1, outfit_id: 1})

@@ -7,6 +7,7 @@
     <tr>
       <th>User ID:</th>
       <th>Date</th>
+      <th>Name</th>
       <th></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
     <tr>
       <td><%= calendar.user_id %></td>
       <td><%= calendar.date %></td>
+      <td><%= calendar.name %></td>
       <td>
         <%= link "Show", to: Routes.calendar_path(@conn, :show, calendar) %>
         <%= link "Edit", to: Routes.calendar_path(@conn, :edit, calendar) %>
