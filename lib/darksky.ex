@@ -3,10 +3,108 @@ defmodule Darksky do
 
   @base_url "https://api.darksky.net/forecast/"
 
-
-  def todaysTemperature do 
-    "73"
+  def getCal() do
+    # @activities
+    # <%= if @current_user.id == activity.user_id do %>
+    ["Swimming","Work"]
   end
+
+  def todaysTemperature() do
+    "50"
+  end
+
+  def todaysWeatherIcon() do
+    "/rain/png"
+  end
+
+  def todaysWeatherSummary() do
+    "Rainy"
+  end
+
+  def getActivityClothes(activity) do
+    cond do
+      (activity === "Swimming") ->
+        ["Goggles","Swim_Trunk"]
+      (activity === "Work") ->
+        ["Tie","Dress_Shirts","Dress_Shoes","Sports_Coat","Slacks"]
+      true ->
+        ["nothing"]
+    end
+  end
+  
+  def getDate(add) do
+    "2019-04-08"
+  end
+
+  def futureHighTemperature(index) do
+    cond do
+      (index === 1) ->
+        "59°F"
+      (index === 2) ->
+        "39°F"
+      (index === 3) ->
+        "36°F"
+      (index === 4) ->
+        "48°F"
+      (index === 5) ->
+        "51°F"
+      true ->
+        "0"
+    end
+  end
+
+  def futureLowTemperature(index) do
+    cond do
+      (index === 1) ->
+        "39°F"
+      (index === 2) ->
+        "19°F"
+      (index === 3) ->
+        "16°F"
+      (index === 4) ->
+        "28°F"
+      (index === 5) ->
+        "35°F"
+      true ->
+        "0"
+    end
+  end
+
+  def futureWeatherIcon(index) do
+    cond do
+      (index === 1) ->
+        "/rain.png"
+      (index === 2) ->
+        "/rain.png"
+      (index === 3) ->
+        "/rain.png"
+      (index === 4) ->
+        "/rain.png"
+      (index === 5) ->
+        "/rain.png"
+      true ->
+        "0"
+    end
+  end
+
+  def futureWeatherSummary(index) do
+    cond do
+      (index === 1) ->
+        "rain"
+      (index === 2) ->
+        "sunny"
+      (index === 3) ->
+        "cloudy"
+      (index === 4) ->
+        "rain"
+      (index === 5) ->
+        "sunny"
+      true ->
+        "0"
+    end
+  end
+
+
   @doc """
   Attempt to use GenServer to tell server to call darkskys api if and only if the current state does not have any weather data
   """

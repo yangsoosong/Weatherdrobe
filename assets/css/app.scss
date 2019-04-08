@@ -15,6 +15,10 @@
 .flex-container {
   display: flex;
   background: floralwhite;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  section {
+    border: 1px solid black;
+    padding: 0px 18px;
+  }
 }
