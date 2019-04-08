@@ -20,7 +20,7 @@ defmodule Weatherdrobe.MixProject do
   def application do
     [
       mod: {Weatherdrobe.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :httpotion, :json]
     ]
   end
 
@@ -43,6 +43,8 @@ defmodule Weatherdrobe.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
+      {:httpotion, "~> 3.1.0"},
+      {:json, "~> 1.0"},
 
       {:comeonin, "~> 4.1"},
       {:argon2_elixir, "~> 1.3"}

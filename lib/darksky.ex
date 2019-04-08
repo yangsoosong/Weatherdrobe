@@ -14,4 +14,36 @@ defmodule Darksky do
     JSON.decode(forecast.body)
   end
 
+
+  def todaysTemperature() do
+
+  end
+
+  def todaysWeatherIcon() do
+
+  end
+
+  def todaysWeatherSummary() do
+
+  end
+
+
+
+
+  def futureHighTemperature() do
+
+  end
+
+  def futureLowTemperature() do
+
+  end
+
+  def futureWeatherIcon() do
+
+  end
+
+  def futureWeatherSummary() do
+
+  end
+
 end

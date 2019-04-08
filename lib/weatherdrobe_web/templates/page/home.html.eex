@@ -2,7 +2,7 @@
 <h2>5 Day Forcast</h2>
 
 
-<%= Darksky.forecast("b84a46d9fcf6afe862dba0b8f1d5906c", 42.339904, -71.0898892) %>
+<%= Darksky.forecast("b84a46d9fcf6afe862dba0b8f1d5906c", 42.339904, -71.0898892, %{lang: "es", exclude: "minutely,hourly,alerts,flags"}) %>
 
 
 
