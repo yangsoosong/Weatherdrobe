@@ -1,153 +1,54 @@
 <%= render(WeatherdrobeWeb.SharedView, "_header.html", conn: @conn) %>
-<h2>5 Day Forcast</h2>
 
+<h2><%= Darksky.getDate(0) %></h2>
 <div class="flex-container">
   <section>
     <div>
-      <div></div>
-      <div>
-      73°F
-      </div>
-    </div>
-    <div>
-      Cal
+      <h3>Calendar</h3>
       <ul>
-        <li>Running</li>
-        <li>Work</li>
-      </ul>
-    </div>
-    <div>
-      Clothes
-      <ul>
-        <li>Hat</li>
-        <li>Gloves</li>
-        <li>Pants</li>
+      <%= for activity <- Darksky.getCal do %>
+        <li><%= activity %></li>
+      <% end %>
       </ul>
     </div>
   </section>
   <section>
     <div>
-      <div>
-      Tuesday
-      </div>
-      <div>
-      73°F
-      </div>
-    </div>
-    <div>
-      Cal
+      <h3>Weather</h3>
       <ul>
-        <li>Running</li>
-        <li>Work</li>
-      </ul>
-    </div>
-    <div>
-      Clothes
-      <ul>
-        <li>Hat</li>
-        <li>Gloves</li>
-        <li>Pants</li>
+        <li><%= Darksky.todaysWeatherSummary %></li>
+        <li><%= Darksky.todaysWeatherIcon %></li>
+        <li><%= Darksky.todaysTemperature %></li>
       </ul>
     </div>
   </section>
   <section>
     <div>
-      <div>
-      Wednesday
-      </div>
-      <div>
-      73°F
-      </div>
-    </div>
-    <div>
-      Cal
-      <ul>
-        <li>Running</li>
-        <li>Work</li>
-      </ul>
-    </div>
-    <div>
-      Clothes
-      <ul>
-        <li>Hat</li>
-        <li>Gloves</li>
-        <li>Pants</li>
-      </ul>
+      <h3>Clothes</h3>
+      <%= for activity <- Darksky.getCal() do %>
+        <h4><%= activity %></h2>
+        <ul>
+          <%= for clothes <- Darksky.getActivityClothes(activity) do %>
+            <li><%= clothes %></li>
+          <% end %>
+        </ul>
+      <% end %>
     </div>
   </section>
-  <section>
-    <div>
+</div>
+
+<h2>5 Day Forcast</h2>
+<div class="flex-container">
+  <%= for index <- [1,2,3,4,5] do %>
+    <section>
       <div>
-      Thursday
+        <h3><%= Darksky.getDate(index) %></h3>
+        <ul>
+          <li><%= Darksky.futureWeatherSummary(index) %></li>
+          <li><%= Darksky.futureWeatherIcon(index) %></li>
+          <li><%= Darksky.futureHighTemperature(index) %> / <%= Darksky.futureLowTemperature(index) %></li>
+        </ul>
       </div>
-      <div>
-      73°F
-      </div>
-    </div>
-    <div>
-      Cal
-      <ul>
-        <li>Running</li>
-        <li>Work</li>
-      </ul>
-    </div>
-    <div>
-      Clothes
-      <ul>
-        <li>Hat</li>
-        <li>Gloves</li>
-        <li>Pants</li>
-      </ul>
-    </div>
-  </section>
-  <section>
-    <div>
-      <div>
-      Friday
-      </div>
-      <div>
-      73°F
-      </div>
-    </div>
-    <div>
-      Cal
-      <ul>
-        <li>Running</li>
-        <li>Work</li>
-      </ul>
-    </div>
-    <div>
-      Clothes
-      <ul>
-        <li>Hat</li>
-        <li>Gloves</li>
-        <li>Pants</li>
-      </ul>
-    </div>
-  </section>
-  <section>
-    <div>
-      <div>
-      Saturday
-      </div>
-      <div>
-      73°F
-      </div>
-    </div>
-    <div>
-      Cal
-      <ul>
-        <li>Running</li>
-        <li>Work</li>
-      </ul>
-    </div>
-    <div>
-      Clothes
-      <ul>
-        <li>Hat</li>
-        <li>Gloves</li>
-        <li>Pants</li>
-      </ul>
-    </div>
-  </section>
+    </section>
+  <% end %>
 </div>
