@@ -7,7 +7,8 @@
 
   <div class="form-group">
     <%= label f, :outfit_type %>
-    <%= text_input f, :outfit_type %>
+    <%= select(f, :outfit_type, Enum.map(["footwear", "gloves", "pants", "shirts", "hats", "sunglasses", "jackets", "ties", "umbrella", "scarf"], fn x -> x end)) %>
+
     <%= error_tag f, :outfit_type %>
   </div>
 
